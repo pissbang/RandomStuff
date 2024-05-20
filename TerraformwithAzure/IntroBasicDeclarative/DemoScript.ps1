@@ -1,9 +1,9 @@
 <# Example demo content for Terraform
 John Savill 5/25/2020 #>
 
-$SubID = '<Sub ID>'
+$SubID = 'b5778163-85dd-45e1-a381-7d076edde4ad'
 
-New-AzResourceGroup -Location southcentralus -Name 'RG-SCUSTFStorage'
+New-AzResourceGroup -Location uksouth -Name 'RG-SCUSTFStorage'
 
 #if you wanted to create a SP for use by Terraform
 #https://www.terraform.io/docs/providers/azurerm/guides/service_principal_client_secret.html
@@ -11,7 +11,7 @@ az ad sp create-for-rbac --role="Contributor" --scopes="/subscriptions/$SubID"
 #would output JSON block you can then use values in provider section of main.tf or define as environment variables
 
 #Define base
-$GitBasePath = 'C:\Users\john\OneDrive\projects\GIT\RandomStuff\TerraformwithAzure'
+$GitBasePath = 'E:\OneDrive\Documents\_VSC\JohnSavill\RandomStuff\TerraformwithAzure'
 
 #Terraform Demo
 #Install from https://www.terraform.io/downloads.html and added to user path
